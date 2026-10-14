@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:18
-    container_name: solidarity-kitchen_postgres
+    container_name: solidarity_kitchen_postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -9,7 +9,7 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - solidarity-kitchen_pgdata:/var/lib/postgresql
+      - pgdata:/var/lib/postgresql
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}" ]
       interval: 5s
@@ -17,4 +17,4 @@ services:
       retries: 10
 
 volumes:
-  solidarity-kitchen_pgdata:
+  pgdata:
