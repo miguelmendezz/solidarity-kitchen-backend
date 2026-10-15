@@ -1,10 +1,9 @@
-package com.miguelmendezz.solidarity_kitchen.entity.enums;
+package com.miguelmendezz.solidarity_kitchen.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 
